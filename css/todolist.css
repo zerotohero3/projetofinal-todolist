@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 25px;
+  max-width: 700px;
+  width: 100%;
+}
+
+h1 {
+  color: #333;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.task-card label {
+  flex: 1;
+  cursor: pointer;
+  transition: color 0.3s;
+  word-break: break-all;
+  text-align: left;
+}
+
+.task-card input[type="checkbox"] {
+  display: none;
+}
+
+.task-card input[type="checkbox"] + label {
+  display: flex;
+  font-size: 18px;
+}
+
+.task-card input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.add-task {
+  display: flex;
+  margin-top: 30px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+}
+
+#addTaskBtn {
+  background-color: #0070ba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#addTaskBtn:hover {
+  background-color: #0056b3;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  max-height: 400px; /* Altura máxima para a lista */
+  overflow-y: auto; /* Barra de rolagem vertical quando necessário */
+}
+
+.editBtn,
+.deleteBtn {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 5px;
+}
+
+.deleteBtn {
+  background-color: #bb0808;
+}
+
+.editBtn {
+  background-color: #ffa300;
+}
+
+.editBtn:hover {
+  background-color: #ffb32f;
+}
+
+.deleteBtn:hover {
+  background-color: #ff3333;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#taskStatus {
+  margin-right: 10px;
+  border: hidden;
+  background-color: #fff;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.p_pendente,
+.p_andamento {
+  margin-right: 45px;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.pendente {
+  background-color: #bb0808;
+}
+
+.andamento {
+  background-color: #ffa300;
+}
+
+.concluida {
+  background-color: #008000;
+}
+
+/* Estilos do modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  max-width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#saveTaskBtn {
+  background-color: #0070ba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#saveTaskBtn:hover {
+  background-color: #0056b3;
+}
+
+.modal-content h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+
+#editTaskInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+}
+
+#logoutButton {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #bb0808;
+  color: white;
+  border: none;
+  margin-top: 25px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#logoutButton:hover {
+  background-color: #ff3333;
+}
