@@ -1,3 +1,10 @@
+@import './reset.css';
+
+:root {
+  --filter-button-w: ;
+  --filter-button-h: ;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,9 +15,8 @@
 body {
   background-color: #f5f5f5;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  max-height: 100vh;
   margin: 0;
   flex-direction: column;
 }
@@ -31,9 +37,13 @@ h1 {
   font-weight: 500;
 }
 
-.todo-list {
-  list-style: none;
-  padding: 0;
+.todo-list-message {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  display: block;
+  color: hsl(0, 0%, 46%);
 }
 
 .task-card {
@@ -101,10 +111,11 @@ h1 {
   background-color: #0056b3;
 }
 
-.todo-list {
+#todo-list {
   list-style: none;
   padding: 0;
-  max-height: 400px; /* Altura máxima para a lista */
+  height: calc(100vh - 200px - 66px - 50px - 28px - 73px - 40px); /* Original: 700px Altura máxima para a lista */
+  max-height: 700px;
   overflow-y: auto; /* Barra de rolagem vertical quando necessário */
 }
 
@@ -148,29 +159,67 @@ h1 {
   margin-right: 10px;
 }
 
+.status-indicator[status="pendente"] {
+  background-color: #bb0808;
+}
+
+.status-indicator[status="andamento"] {
+  background-color: #ffa300;
+}
+
+.status-indicator[status="concluida"] {
+  background-color: #008000;
+}
+
 #taskStatus {
   margin-right: 10px;
   border: hidden;
   background-color: #fff;
 }
 
-.circles {
+#filter-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  gap: 20px;
+  padding: 0px 20px 0px 20px;
+  margin: 16px 0px 16px;
 }
 
-.p_pendente,
-.p_andamento {
-  margin-right: 45px;
+.filter-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;  
+
+  border-radius: 5px;
+  /* border: solid hsl(0, 0%, 90%) 2px; */
+  border: none;
+  /* box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px; */
+  cursor: pointer;
+  background-color: hsl(0, 0%, 96%);
+  padding: 8px;
+}
+
+.filter-button[isSelected="true"] {
+  /* background-color: rgba(0, 86, 179, 0.4); */
+  &::after {
+    content: '';
+    position: absolute;
+    width: var(--filter-button-w);
+    height: var(--filter-button-h);
+    border: hsl(0, 0%, 75%) 2px solid;
+    border-radius: 5px;
+
+  }
 }
 
 .circle {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  margin-right: 10px;
 }
 
 .pendente {

@@ -12,12 +12,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="/projetofinal-todolist/js/todolist.js" defer></script>
-  <link rel="stylesheet" href="/projetofinal-todolist/css/todolist.css">
+  <script src="../js/todolist.js" defer></script>
+  <link rel="stylesheet" href="../css/todolist.css">
 </head>
 
 <body>
-  <img src="/projetofinal-todolist/assets/test2.png" alt="Logotipo" class="logo">
+  <img src="../assets/test2.png" alt="Logotipo" class="logo">
   <div id="editModal" class="modal">
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
@@ -26,17 +26,30 @@
       <button id="saveTaskBtn">Salvar</button>
     </div>
   </div>
-  <div class="container">
+  <div class="container" id="taskPageContainer">
     <h1>Minha lista de <strong>tarefas</strong></h1>
-    <div class="circles">
-      <span class="circle pendente"></span>
-      <p class="p_pendente">Pendente</p>
-      <span class="circle andamento"></span>
-      <p class="p_andamento">Em andamento</p>
-      <span class="circle concluida"></span>
-      <p class="p_concluida">Concluída</p>
+    <div id="filter-buttons">
+      <button class="filter-button" id="btn-todas">
+        <p class="p_pendente">Todas</p>
+      </button>
+      
+      <button class="filter-button" id="btn-pendente">
+        <span class="circle pendente"></span>
+        <p class="p_pendente">Pendentes</p>
+      </button>
+
+      <button class="filter-button" id="btn-andamento">
+        <span class="circle andamento"></span>
+        <p class="p_andamento">Em andamento</p>
+      </button>
+
+      <button class="filter-button" id="btn-concluida">
+        <span class="circle concluida"></span>
+        <p class="p_concluida">Concluídas</p>
+      </button>
+
     </div>
-    <div class="todo-list">
+    <div id="todo-list">
 
     </div>
     <div class="add-task">
