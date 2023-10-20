@@ -114,7 +114,8 @@ h1 {
 #todo-list {
   list-style: none;
   padding: 0;
-  max-height: calc(100vh - 200px - 66px - 50px - 28px - 73px - 40px); /* Original: 700px Altura máxima para a lista */
+  height: calc(100vh - 200px - 66px - 50px - 28px - 73px - 40px); /* Original: 700px Altura máxima para a lista */
+  max-height: 700px;
   overflow-y: auto; /* Barra de rolagem vertical quando necessário */
 }
 
