@@ -26,17 +26,30 @@
       <button id="saveTaskBtn">Salvar</button>
     </div>
   </div>
-  <div class="container">
+  <div class="container" id="taskPageContainer">
     <h1>Minha lista de <strong>tarefas</strong></h1>
-    <div class="circles">
-      <span class="circle pendente"></span>
-      <p class="p_pendente">Pendente</p>
-      <span class="circle andamento"></span>
-      <p class="p_andamento">Em andamento</p>
-      <span class="circle concluida"></span>
-      <p class="p_concluida">Concluída</p>
+    <div id="filter-buttons">
+      <button class="filter-button" id="btn-todas">
+        <p class="p_pendente">Todas</p>
+      </button>
+      
+      <button class="filter-button" id="btn-pendente">
+        <span class="circle pendente"></span>
+        <p class="p_pendente">Pendentes</p>
+      </button>
+
+      <button class="filter-button" id="btn-andamento">
+        <span class="circle andamento"></span>
+        <p class="p_andamento">Em andamento</p>
+      </button>
+
+      <button class="filter-button" id="btn-concluida">
+        <span class="circle concluida"></span>
+        <p class="p_concluida">Concluídas</p>
+      </button>
+
     </div>
-    <div class="todo-list">
+    <div id="todo-list">
 
     </div>
     <div class="add-task">
