@@ -56,7 +56,7 @@ loginForm.addEventListener("submit", function (e) {
   if (userData && userData.senha === senhaLogin) {
     // Redireciona o usuário para a página do Todo List
     localStorage.setItem("currentUserEmail", emailLogin); 
-    window.location.href = "todolist.html";
+    window.location.href = "./html/todolist.html";
   } else {
     alert("Credenciais inválidas. Tente novamente.");
   }

@@ -22,7 +22,7 @@ root.style.setProperty("--filter-button-h", filterButtonArray[1].offsetHeight + 
 
 if (!currentUserEmail) {
   // Redireciona o usuário de volta para a página de login se não houver usuário logado
-  window.location.href = "index.html";
+  window.location.href = "../index.html";
 }
 
 // Usa o email do usuário para criar uma chave única no localStorage
@@ -249,7 +249,7 @@ logoutButton.addEventListener("click", () => {
   localStorage.removeItem("currentUserEmail");
 
   // Redireciona para a página de login
-  window.location.href = "index.html";
+  window.location.href = "../index.html";
 });
 
 
